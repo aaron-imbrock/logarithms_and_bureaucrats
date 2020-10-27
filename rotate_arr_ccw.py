@@ -2,10 +2,18 @@
 # Something is wrong. I think there's an off-by-1 error in rev_sub_arr() which in turn affects rotate_array().
 # Adapted from readings of https://dotkay.github.io/2018/04/08/rotate-array-ccw/
 
-def rev_array_in_place(arr, n):
+# def rev_array_in_place(arr, n):
+#     i = 0
+#     while (i < (n/2)):
+#         arr[i], arr[n - i - 1] = arr[n - i - 1], arr[i]
+#         i = i + 1
+#     return arr
+
+def rev_array_in_place(arr):
+    n = len(arr)
     i = 0
     while (i < (n/2)):
-        arr[i], arr[n - i - 1] = arr[n - i -1], arr[i]
+        arr[i], arr[n - i - 1] = arr[n - i - 1], arr[i]
         i = i + 1
     return arr
 
